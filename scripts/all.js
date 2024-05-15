@@ -1,20 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const seatsContainer = document.querySelector(".seats");
-    const selectedCountDisplay = document.querySelector("#selectedCount");
-    const totalSeats = 120;
+    const assentosCon = document.querySelector(".assentos");
+    const contador = document.querySelector("#contagem");
+    const assentos = 150;
 
-    for (let i = 0; i < totalSeats; i++) {
-        const seat = document.createElement("div");
-        seat.classList.add("seat");
-        seat.addEventListener("click", () => {
-            seat.classList.toggle("selected");
+    for (let i = 0; i < assentos; i++) {
+        const assento = document.createElement("div");
+        assento.classList.add("assento");
+        assento.textContent = i + 1;
+        assento.addEventListener("click", () => {
+            assento.classList.toggle("selected");
             updateSelectedCount();
         });
-        seatsContainer.appendChild(seat);
+        assentosCon.appendChild(assento);
     }
 
     function updateSelectedCount() {
-        const selectedSeats = document.querySelectorAll(".seat.selected").length;
-        selectedCountDisplay.textContent = selectedSeats;
+        const assentosSel = document.querySelectorAll(".assento.selected").length;
+        contador.textContent = assentosSel;
     }
 });
