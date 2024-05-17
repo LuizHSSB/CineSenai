@@ -1,10 +1,3 @@
-$("#fecharAdd").on("click",function(){
-    $("#ingresso").removeClass("d-flex")
-    $("#ingresso").addClass("d-none")
+document.querySelector("#fecharAdd").addEventListener("click",function(){
+    document.querySelector("#anuncio").classList.replace("d-flex","d-none");
 });
-
-
-
-fecharAdd
-
-document.querySelector("#fecharAdd")

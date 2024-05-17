@@ -45,6 +45,10 @@
     border-radius: 10px;
 }
 
+.border-radius-2{
+    border-radius: 15px;
+}
+
 #fecharAdd:hover{
     cursor: pointer;
 }
@@ -81,4 +85,18 @@
 
 .fs-7{
     font-size: 12px;
+}
+
+html, body{
+    height: 100%;
+    margin:0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
 }
